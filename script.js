@@ -156,3 +156,80 @@ function createToast(type){
 
   },4000);
 }
+
+const modalOverlay =
+document.getElementById(
+  "modalOverlay"
+);
+
+const openModalBtn =
+document.getElementById(
+  "openModalBtn"
+);
+
+const closeModalBtn =
+document.getElementById(
+  "closeModalBtn"
+);
+
+const cancelModalBtn =
+document.getElementById(
+  "cancelModalBtn"
+);
+
+openModalBtn.addEventListener(
+  "click",
+  () => {
+
+    modalOverlay.classList.add(
+      "show"
+    );
+
+  }
+);
+
+closeModalBtn.addEventListener(
+  "click",
+  closeModal
+);
+
+cancelModalBtn.addEventListener(
+  "click",
+  closeModal
+);
+
+modalOverlay.addEventListener(
+  "click",
+  e => {
+
+    if(
+      e.target === modalOverlay
+    ){
+      closeModal();
+    }
+
+  }
+);
+
+function closeModal(){
+
+  modalOverlay.classList.remove(
+    "show"
+  );
+
+}
+
+document.addEventListener(
+    "keydown",
+    e => {
+  
+      if(
+        e.key === "Escape"
+      ){
+  
+        closeModal();
+  
+      }
+  
+    }
+  );
