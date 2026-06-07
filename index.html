@@ -1,62 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UI Component Lab</title>
 
-  <link rel="stylesheet" href="styles.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Component Lab</title>
+
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-  <header class="hero">
+    <header class="hero">
 
-    <div class="badge">
-      Frontend Playground
-    </div>
+        <div class="badge">
+            Frontend Playground
+        </div>
 
-    <h1>UI Component Lab</h1>
+        <h1>UI Component Lab</h1>
 
-    <p class="subtitle">
-      Modern, accessible and reusable UI components.
-    </p>
+        <p class="subtitle">
+            Modern, accessible and reusable UI components.
+        </p>
 
-    <button id="themeToggle">
-      🌙 Dark Mode
-    </button>
+        <button id="themeToggle">
+            🌙 Dark Mode
+        </button>
 
-  </header>
+    </header>
 
-  <main class="components">
+    <main class="components">
 
-    <section class="component-card">
-      <h2>Skeleton Loader</h2>
-      <p>Beautiful loading states.</p>
-    </section>
+        <section class="component-card skeleton-section">
 
-    <section class="component-card">
-      <h2>Toast Notification</h2>
-      <p>Elegant feedback messages.</p>
-    </section>
+            <div class="component-header">
+                <h2>Skeleton Loader</h2>
 
-    <section class="component-card">
-      <h2>Modal Dialog</h2>
-      <p>Accessible modal windows.</p>
-    </section>
+                <div class="controls">
 
-    <section class="component-card">
-      <h2>Tabs</h2>
-      <p>Interactive content switching.</p>
-    </section>
+                    <button class="animation-btn active" data-animation="shimmer">
+                        Shimmer
+                    </button>
 
-    <section class="component-card">
-      <h2>Accordion</h2>
-      <p>Expandable content sections.</p>
-    </section>
+                    <button class="animation-btn" data-animation="wave">
+                        Wave
+                    </button>
 
-  </main>
+                    <button class="animation-btn" data-animation="pulse">
+                        Pulse
+                    </button>
 
-  <script src="script.js"></script>
+                </div>
+
+            </div>
+
+            <div id="skeletonDemo">
+
+                <div class="social-card">
+
+                    <div class="skeleton avatar"></div>
+
+                    <div class="content">
+                        <div class="skeleton line w40"></div>
+                        <div class="skeleton line w20"></div>
+                    </div>
+
+                </div>
+
+                <div class="skeleton line"></div>
+                <div class="skeleton line w80"></div>
+                <div class="skeleton media"></div>
+
+            </div>
+
+        </section>
+
+        <section class="component-card">
+            <h2>Toast Notification</h2>
+            <p>Elegant feedback messages.</p>
+        </section>
+
+        <section class="component-card">
+            <h2>Modal Dialog</h2>
+            <p>Accessible modal windows.</p>
+        </section>
+
+        <section class="component-card">
+            <h2>Tabs</h2>
+            <p>Interactive content switching.</p>
+        </section>
+
+        <section class="component-card">
+            <h2>Accordion</h2>
+            <p>Expandable content sections.</p>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>

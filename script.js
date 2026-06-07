@@ -30,3 +30,49 @@ if(
   themeToggle.textContent =
     "☀️ Light Mode";
 }
+
+const animationButtons =
+document.querySelectorAll(
+  ".animation-btn"
+);
+
+const skeletons =
+document.querySelectorAll(
+  ".skeleton"
+);
+
+function applyAnimation(type){
+
+  skeletons.forEach(el => {
+
+    el.classList.remove(
+      "shimmer",
+      "wave",
+      "pulse"
+    );
+
+    el.classList.add(type);
+
+  });
+}
+
+applyAnimation("shimmer");
+
+animationButtons.forEach(btn => {
+
+  btn.addEventListener(
+    "click",
+    () => {
+
+      animationButtons.forEach(
+        b => b.classList.remove("active")
+      );
+
+      btn.classList.add("active");
+
+      applyAnimation(
+        btn.dataset.animation
+      );
+    }
+  );
+});
