@@ -31,19 +31,19 @@ The biggest blocker is not the number of components. The biggest blocker is that
 ### P1 - Improve integration experience
 - [x] Add a "How to integrate" section to `README.md`
 - [x] Explain which files users need to copy for a single component
-- [ ] Document required HTML structure for each component
+- [x] Document required HTML structure for each component
 - [x] Document required CSS and JS files for each component
 - [x] Document initialization steps for each interactive component
-- [ ] Document expected data attributes and class hooks
+- [x] Document expected data attributes and class hooks
 - [ ] Add a troubleshooting section for common integration mistakes
 
 ### P2 - Create real component documentation
 - [ ] Add one documentation section or page per component
-- [ ] Include usage examples for all implemented components
+- [x] Include usage examples for all implemented components
 - [ ] Add accessibility notes per component
 - [ ] Add keyboard interaction notes per component
 - [ ] Add customization options based on CSS variables and classes
-- [ ] Add "copy only this component" examples instead of generic snippets
+- [x] Add "copy only this component" examples instead of generic snippets
 
 ### P3 - Standardize component APIs
 - [x] Review all component init patterns for consistency
@@ -73,7 +73,7 @@ The biggest blocker is not the number of components. The biggest blocker is that
 - [x] README reflects actual state
 - [x] Roadmap reflects actual state
 - [x] Improvement tracker stays updated
-- [ ] Each component has usage docs
+- [x] Each component has usage docs
 - [ ] Each component has accessibility docs
 
 ### Integration

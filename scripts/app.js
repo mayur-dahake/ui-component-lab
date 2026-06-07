@@ -12,6 +12,7 @@ import { initSidebar } from "./components/sidebar.js";
 import { initNotificationCenter } from "./components/notification-center.js";
 import { initBreadcrumb } from "./components/breadcrumb.js";
 import { initCopyButtons, initSnippetTabs } from "./copy.js";
+import { initCodeViewer } from "./code-viewer.js";
 
 function initStats() {
   const statValues = document.querySelectorAll("[data-count]");
@@ -76,6 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initBreadcrumb();
   initCopyButtons();
   initSnippetTabs();
+  initCodeViewer();
   initStats();
   initSmoothNav();
 });

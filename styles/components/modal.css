@@ -71,3 +71,53 @@
   gap: 12px;
   margin-top: 28px;
 }
+
+/* Large modal option */
+.modal.modal-lg {
+  width: min(800px, 100%);
+}
+
+/* Code viewer components */
+.code-viewer-tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+}
+
+.code-tab {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 6px 16px;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: background 0.2s, color 0.2s;
+}
+
+.code-tab:hover {
+  background: var(--bg-secondary);
+  color: var(--text);
+}
+
+.code-tab.active {
+  background: var(--primary);
+  color: white;
+}
+
+.code-viewer-body {
+  padding: 0;
+}
+
+.code-viewer-body .code-block {
+  border-radius: var(--radius-md);
+  margin: 0;
+}
+
+.code-viewer-body pre {
+  max-height: 480px;
+  margin: 0;
+}
