@@ -1,4 +1,4 @@
-# UI Component Lab - Improvements Tracker
+# MDevHub UI - Improvements Tracker
 
 This file tracks the current product state, the biggest adoption gaps, and the work needed to make the component library easier for end users to integrate into their own projects.
 

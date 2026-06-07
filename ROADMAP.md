@@ -1,4 +1,4 @@
-# UI Component Lab — Product Roadmap & Architecture
+# MDevHub UI — Product Roadmap & Architecture
 
 ## Vision
 Build a modern frontend component library and playground showcasing reusable, accessible, themeable, and production-ready UI components using HTML, CSS, and JavaScript.
@@ -61,7 +61,7 @@ Build a modern frontend component library and playground showcasing reusable, ac
 ## Project Structure
 
 ```
-ui-component-lab/
+mdevhub-ui/
 ├── index.html
 ├── styles/
 │   ├── base.css
