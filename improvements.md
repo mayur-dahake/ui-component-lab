@@ -38,11 +38,11 @@ The biggest blocker is not the number of components. The biggest blocker is that
 - [x] Add a troubleshooting section for common integration mistakes
 
 ### P2 - Create real component documentation
-- [ ] Add one documentation section or page per component
+- [x] Add one documentation section or page per component
 - [x] Include usage examples for all implemented components
-- [ ] Add accessibility notes per component
-- [ ] Add keyboard interaction notes per component
-- [ ] Add customization options based on CSS variables and classes
+- [x] Add accessibility notes per component
+- [x] Add keyboard interaction notes per component
+- [x] Add customization options based on CSS variables and classes
 - [x] Add "copy only this component" examples instead of generic snippets
 
 ### P3 - Standardize component APIs
@@ -56,7 +56,7 @@ The biggest blocker is not the number of components. The biggest blocker is that
 - [ ] Consider a `dist/` output for copy-paste use
 - [x] Consider component-level entry files
 - [x] Consider packaging for npm in a later phase
-- [ ] Add framework integration examples for React and Angular
+- [x] Add framework integration examples for React and Angular
 - [ ] Add Web Components strategy notes if that remains part of the roadmap
 
 ## Suggested Immediate Sequence

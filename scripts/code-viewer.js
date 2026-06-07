@@ -1,4 +1,4 @@
-import { HTML_TEMPLATES } from "./templates.js";
+import { HTML_TEMPLATES, REACT_TEMPLATES, ANGULAR_TEMPLATES } from "./templates.js";
 
 // Helper to escape HTML characters for visual display
 function escapeHtml(text) {
@@ -21,7 +21,7 @@ export function initCodeViewer() {
 
   let currentComponent = "";
   let activeLang = "html";
-  const cache = { html: "", css: "", js: "" };
+  const cache = { html: "", css: "", js: "", react: "", angular: "" };
 
   const COPY_ICON = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>`;
   const CHECK_ICON = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>`;
@@ -32,8 +32,10 @@ export function initCodeViewer() {
     modal.setAttribute("aria-hidden", "false");
     document.body.style.overflow = "hidden";
     
-    // Clear cache
+    // Clear and populate initial cache
     cache.html = HTML_TEMPLATES[componentName] || "";
+    cache.react = REACT_TEMPLATES[componentName] || "";
+    cache.angular = ANGULAR_TEMPLATES[componentName] || "";
     cache.css = "";
     cache.js = "";
 
@@ -88,6 +90,10 @@ export function initCodeViewer() {
         fallback = "/* No separate styling stylesheet required or styles embedded in utilities.css */";
       } else if (lang === "js") {
         fallback = "/* Purely CSS-driven component. No JavaScript initialization required. */";
+      } else if (lang === "react") {
+        fallback = "/* React wrapper code not available for this component. */";
+      } else if (lang === "angular") {
+        fallback = "/* Angular wrapper code not available for this component. */";
       }
       cache[lang] = fallback;
       codeDisplay.innerHTML = fallback;

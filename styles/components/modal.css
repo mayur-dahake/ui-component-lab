@@ -84,9 +84,16 @@
   margin-bottom: 16px;
   border-bottom: 1px solid var(--border);
   padding-bottom: 8px;
+  overflow-x: auto;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.code-viewer-tabs::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome/Safari */
 }
 
 .code-tab {
+  flex-shrink: 0;
   background: none;
   border: none;
   color: var(--text-muted);
