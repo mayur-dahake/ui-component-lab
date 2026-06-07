@@ -17,6 +17,10 @@
   <link rel="stylesheet" href="styles/components/toast.css">
   <link rel="stylesheet" href="styles/components/modal.css">
   <link rel="stylesheet" href="styles/components/tabs.css">
+  <link rel="stylesheet" href="styles/components/command-palette.css">
+  <link rel="stylesheet" href="styles/components/sidebar.css">
+  <link rel="stylesheet" href="styles/components/notification-center.css">
+  <link rel="stylesheet" href="styles/components/breadcrumb.css">
   <link rel="stylesheet" href="styles/components/accordion.css">
   <link rel="stylesheet" href="styles/components/dropdown.css">
   <link rel="stylesheet" href="styles/components/tooltip.css">
@@ -199,6 +203,108 @@
                 on reload.</p>
             </div>
           </div>
+        </section>
+
+        <!-- Command Palette -->
+        <section class="component-card component-card-wide" aria-labelledby="palette-heading">
+          <div class="component-header">
+            <div>
+              <h2 id="palette-heading">Command Palette</h2>
+              <p class="component-description">Quickly search app actions from anywhere with keyboard shortcuts.</p>
+            </div>
+            <div class="controls">
+              <button class="control-btn" data-open-palette>Open Palette</button>
+              <button class="copy-btn" data-label="Copy component" data-target="closest" aria-label="Copy component code"></button>
+            </div>
+          </div>
+          <div class="command-palette-preview">
+            <p>Press <kbd>Ctrl</kbd> + <kbd>K</kbd> to open the palette and execute commands.</p>
+          </div>
+        </section>
+
+        <!-- Sidebar Navigation -->
+        <section class="component-card sidebar-card" aria-labelledby="sidebar-heading">
+          <div class="component-header">
+            <div>
+              <h2 id="sidebar-heading">Sidebar Navigation</h2>
+              <p class="component-description">A collapsible sidebar with nested navigation links for app layouts.</p>
+            </div>
+            <div class="controls">
+              <button class="control-btn" data-toggle-sidebar>Collapse sidebar</button>
+              <button class="copy-btn" data-label="Copy component" data-target="closest" aria-label="Copy component code"></button>
+            </div>
+          </div>
+          <div class="sidebar">
+            <nav class="sidebar-nav" aria-label="Sidebar menu">
+              <a href="#" class="sidebar-link active" title="Dashboard"><span class="sidebar-icon">📊</span><span class="sidebar-label">Dashboard</span></a>
+              <a href="#" class="sidebar-link" title="Projects"><span class="sidebar-icon">📁</span><span class="sidebar-label">Projects</span></a>
+              <a href="#" class="sidebar-link" title="Tasks"><span class="sidebar-icon">✓</span><span class="sidebar-label">Tasks</span></a>
+              <a href="#" class="sidebar-link" title="Reports"><span class="sidebar-icon">📈</span><span class="sidebar-label">Reports</span></a>
+            </nav>
+          </div>
+        </section>
+
+        <!-- Notification Center -->
+        <section class="component-card notification-center-card" aria-labelledby="notifications-heading">
+          <div class="component-header">
+            <div>
+              <h2 id="notifications-heading">Notification Center</h2>
+              <p class="component-description">A lightweight panel for recent alerts, messages, and quick actions.</p>
+            </div>
+            <div class="controls">
+              <button class="control-btn" data-toggle-notifications aria-expanded="false">Show notifications</button>
+              <button class="copy-btn" data-label="Copy component" data-target="closest" aria-label="Copy component code"></button>
+            </div>
+          </div>
+          <div class="notification-panel">
+            <div class="notification-item notification-item-success">
+              <div class="notification-badge" aria-hidden="true"></div>
+              <div class="notification-info">
+                <h4>Server sync complete</h4>
+                <p>Your workspace is now up to date.</p>
+              </div>
+              <button class="notification-dismiss" aria-label="Dismiss notification">✕</button>
+            </div>
+            <div class="notification-item notification-item-info">
+              <div class="notification-badge" aria-hidden="true"></div>
+              <div class="notification-info">
+                <h4>New comment received</h4>
+                <p>Alex left feedback on the project card.</p>
+              </div>
+              <button class="notification-dismiss" aria-label="Dismiss notification">✕</button>
+            </div>
+            <div class="notification-item notification-item-success">
+              <div class="notification-badge" aria-hidden="true"></div>
+              <div class="notification-info">
+                <h4>Backup completed</h4>
+                <p>All files have been safely backed up.</p>
+              </div>
+              <button class="notification-dismiss" aria-label="Dismiss notification">✕</button>
+            </div>
+            <div class="notification-footer">
+              <button data-clear-notifications>Clear all</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Breadcrumb -->
+        <section class="component-card" aria-labelledby="breadcrumb-heading">
+          <div class="component-header">
+            <div>
+              <h2 id="breadcrumb-heading">Breadcrumb</h2>
+              <p class="component-description">A navigation trail to help users understand page hierarchy.</p>
+            </div>
+            <div class="controls">
+              <button class="copy-btn" data-label="Copy component" data-target="closest" aria-label="Copy component code"></button>
+            </div>
+          </div>
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="#">Home</a>
+            <span class="breadcrumb-separator" aria-hidden="true">/</span>
+            <a href="#">Projects</a>
+            <span class="breadcrumb-separator" aria-hidden="true">/</span>
+            <span aria-current="page">Dashboard</span>
+          </nav>
         </section>
 
         <!-- Accordion -->
@@ -737,6 +843,47 @@ document.querySelector(".toast-btn.success")
       <div class="modal-actions">
         <button class="btn btn-primary" id="infoModalOkBtn">Got it</button>
       </div>
+    </div>
+  </div>
+
+  <div class="command-palette" role="dialog" aria-modal="true" aria-label="Command palette">
+    <div class="command-palette-panel">
+      <div class="command-palette-header">
+        <h3>Command Palette</h3>
+        <button class="command-palette-close" aria-label="Close command palette">×</button>
+      </div>
+      <input class="command-palette-input" type="search" placeholder="Search commands…" aria-label="Search commands" />
+      <div class="command-palette-list">
+        <button class="command-palette-item" data-command="Open Dashboard">
+          <div>
+            <h4>Open Dashboard</h4>
+            <p>Jump to the main workspace.</p>
+          </div>
+          <span>⌘+1</span>
+        </button>
+        <button class="command-palette-item" data-command="Create new task">
+          <div>
+            <h4>Create new task</h4>
+            <p>Start a new task in the current project.</p>
+          </div>
+          <span>⌘+T</span>
+        </button>
+        <button class="command-palette-item" data-command="Open notifications">
+          <div>
+            <h4>Open notifications</h4>
+            <p>Review recent alerts and messages.</p>
+          </div>
+          <span>⌘+N</span>
+        </button>
+        <button class="command-palette-item" data-command="View reports">
+          <div>
+            <h4>View reports</h4>
+            <p>Open the reports view for your team.</p>
+          </div>
+          <span>⌘+R</span>
+        </button>
+      </div>
+      <p class="command-palette-note">Tip: press Ctrl + K or Cmd + K to open quickly.</p>
     </div>
   </div>
 

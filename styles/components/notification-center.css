@@ -1,0 +1,87 @@
+.notification-center-card .notification-panel {
+  display: none;
+  margin-top: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--card);
+  overflow: hidden;
+}
+
+.notification-center-card .notification-panel.is-open {
+  display: block;
+}
+
+.notification-center-card .notification-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+
+.notification-center-card .notification-badge {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.notification-center-card .notification-item-success .notification-badge {
+  background: var(--success);
+}
+
+.notification-center-card .notification-item-error .notification-badge {
+  background: var(--error);
+}
+
+.notification-center-card .notification-item-warning .notification-badge {
+  background: var(--warning);
+}
+
+.notification-center-card .notification-item-info .notification-badge {
+  background: var(--info);
+}
+
+.notification-center-card .notification-item:last-of-type {
+  border-bottom: none;
+}
+
+.notification-center-card .notification-item h4 {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.notification-center-card .notification-item p {
+  margin: 0.35rem 0 0;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.notification-center-card .notification-info {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.notification-center-card .notification-dismiss {
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0.35rem;
+}
+
+.notification-center-card .notification-footer {
+  padding: 0.75rem 1rem;
+  background: var(--bg-secondary);
+  text-align: right;
+}
+
+.notification-center-card .notification-footer button {
+  border: 1px solid var(--border);
+  background: var(--card);
+  padding: 0.65rem 0.9rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}

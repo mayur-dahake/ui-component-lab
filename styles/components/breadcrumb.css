@@ -1,0 +1,36 @@
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 0.85rem 1rem;
+  align-items: center;
+}
+
+.breadcrumb a,
+.breadcrumb span {
+  color: var(--text);
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb .breadcrumb-separator {
+  color: var(--text-muted);
+}
+
+.breadcrumb span[aria-current="page"] {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.breadcrumb a:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}

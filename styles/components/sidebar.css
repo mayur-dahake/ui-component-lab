@@ -1,0 +1,71 @@
+.sidebar-card .sidebar {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1rem;
+  background: var(--card);
+}
+
+.sidebar-card .sidebar.is-collapsed {
+  max-width: 6rem;
+}
+
+.sidebar-card .sidebar-nav {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.sidebar-card .sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  background: var(--bg-secondary);
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.sidebar-card .sidebar-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1.2rem;
+}
+
+.sidebar-card .sidebar-label {
+  white-space: nowrap;
+}
+
+.sidebar-card .sidebar.is-collapsed .sidebar-link {
+  padding: 0.75rem;
+  justify-content: center;
+}
+
+.sidebar-card .sidebar.is-collapsed .sidebar-label {
+  display: none;
+}
+
+.sidebar-card .sidebar-link:hover,
+.sidebar-card .sidebar-link.active {
+  background: var(--bg);
+  color: var(--text);
+}
+
+
+.sidebar-card .sidebar-toggle {
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.sidebar-card .sidebar-toggle:hover {
+  background: var(--bg-secondary);
+}
