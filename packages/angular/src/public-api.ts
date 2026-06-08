@@ -5,6 +5,23 @@ export * from "./file-upload.component";
 export * from "./modal.directive";
 export * from "./multi-select.component";
 
+export * from "./theme-toggle.component";
+export * from "./skeleton.component";
+export * from "./toast.service";
+export * from "./toast.component";
+export * from "./accordion.component";
+export * from "./tabs.component";
+export * from "./tooltip.directive";
+export * from "./badge.component";
+export * from "./avatar.component";
+export * from "./progress-bar.component";
+export * from "./alert.component";
+export * from "./command-palette.component";
+export * from "./sidebar.component";
+export * from "./notification-center.component";
+export * from "./breadcrumb.component";
+export * from "./code-snippet.component";
+
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
@@ -16,6 +33,22 @@ import { FileUploadComponent } from "./file-upload.component";
 import { ModalTargetDirective } from "./modal.directive";
 import { MultiSelectComponent } from "./multi-select.component";
 
+import { ThemeToggleComponent } from "./theme-toggle.component";
+import { SkeletonComponent } from "./skeleton.component";
+import { ToastComponent } from "./toast.component";
+import { AccordionComponent, AccordionItemComponent } from "./accordion.component";
+import { TabsComponent, TabPanelComponent } from "./tabs.component";
+import { TooltipDirective } from "./tooltip.directive";
+import { BadgeComponent } from "./badge.component";
+import { AvatarComponent, AvatarGroupComponent } from "./avatar.component";
+import { ProgressBarComponent } from "./progress-bar.component";
+import { AlertComponent } from "./alert.component";
+import { CommandPaletteComponent } from "./command-palette.component";
+import { SidebarComponent, SidebarLinkComponent } from "./sidebar.component";
+import { NotificationCenterComponent, NotificationItemComponent } from "./notification-center.component";
+import { BreadcrumbComponent } from "./breadcrumb.component";
+import { CodeSnippetComponent } from "./code-snippet.component";
+
 @NgModule({
   declarations: [
     DataGridComponent,
@@ -23,7 +56,27 @@ import { MultiSelectComponent } from "./multi-select.component";
     DropdownComponent,
     FileUploadComponent,
     ModalTargetDirective,
-    MultiSelectComponent
+    MultiSelectComponent,
+    ThemeToggleComponent,
+    SkeletonComponent,
+    ToastComponent,
+    AccordionComponent,
+    AccordionItemComponent,
+    TabsComponent,
+    TabPanelComponent,
+    TooltipDirective,
+    BadgeComponent,
+    AvatarComponent,
+    AvatarGroupComponent,
+    ProgressBarComponent,
+    AlertComponent,
+    CommandPaletteComponent,
+    SidebarComponent,
+    SidebarLinkComponent,
+    NotificationCenterComponent,
+    NotificationItemComponent,
+    BreadcrumbComponent,
+    CodeSnippetComponent
   ],
   imports: [
     CommonModule,
@@ -36,7 +89,28 @@ import { MultiSelectComponent } from "./multi-select.component";
     FileUploadComponent,
     ModalTargetDirective,
     MultiSelectComponent,
+    ThemeToggleComponent,
+    SkeletonComponent,
+    ToastComponent,
+    AccordionComponent,
+    AccordionItemComponent,
+    TabsComponent,
+    TabPanelComponent,
+    TooltipDirective,
+    BadgeComponent,
+    AvatarComponent,
+    AvatarGroupComponent,
+    ProgressBarComponent,
+    AlertComponent,
+    CommandPaletteComponent,
+    SidebarComponent,
+    SidebarLinkComponent,
+    NotificationCenterComponent,
+    NotificationItemComponent,
+    BreadcrumbComponent,
+    CodeSnippetComponent,
     FormsModule
   ]
 })
 export class MayvioUIModule {}
+
